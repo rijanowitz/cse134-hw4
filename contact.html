@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Medical Information and Advocacy</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <nav-icon><a href="index.html"><img src="images/logo.png" alt="Return to home"></a></nav-icon>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about me</a></li>
+                    <li><a href="templates.html">templates</a></li>
+                    <li><a href="links.html">helpful links</a></li>
+                    <li><a href="contact.html">contact me</a></li>
+                </ul>
+            </nav>
+            <nav-banner>
+                    <banner-title>Medical Information and Advocacy</banner-title>
+                    <img src="images/banner1.JPG" alt="">
+                    <img src="images/banner2.JPG" alt="">
+                    <img src="images/banner3.JPG" alt="">
+            </nav-banner>
+        </header>
+        <main>
+            <section class="about">
+                <h2>Disclaimer</h2>
+                <img class="img-disc" src="images/caution.jpg">
+                <p>The content on this website, <em>Medical Information and Advocacy</em>, is intended for informational and educational purposes only and reflects my personal experiences and opinions from working in healthcare.</p>
+                <p>Nothing on this site should be interpreted as medical advice, legal advice, diagnosis, or treatment recommendation. I am not a licensed medical professional or attorney, and the materials shared here are not a substitute for professional guidance.</p>
+                <p>Always seek the advice of qualified healthcare providers or legal professionals regarding any medical or legal concerns you may have. Never disregard professional advice or delay seeking it because of something you read on this website.</p>
+                <p>Use of this site does not create any kind of professional-client relationship.</p>
+            </section>
+            <section>
+                <h2 >Contact Form</h2>
+                <form action="/contact.html" method="post">
+                    <fieldset>
+                    
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="identity">I am a:</label><br>
+                        <select id="identity" name="identity">
+                            <option value="">I am a...</option>
+                            <option value="patient">Patient</option>
+                            <option value="provider">Provider</option>
+                            <option value="other">Other</option>
+                        </select><br><br>
+
+                        <label for="ins">If this is regarding a specific insurance, enter below:</label><br>
+                        <input list="insurance" id="ins" name="ins">
+                        <datalist id="insurance">
+                            <option value="comm-ppo">Commercial PPO</option>
+                            <option value="comm-hmo">Commercial HMO</option>
+                            <option value="medicare">Medicare</option>
+                            <option value="medicaid">Medicaid</option>
+                        </datalist><br><br>
+
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" required></textarea><br><br>
+
+                        <button type="submit">Send Message</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <a href="https://www.vecteezy.com/free-photos/amputee">Stock photos by Vecteezy</a>
+        </footer>
+    </body>
+</html>
