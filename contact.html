@@ -30,7 +30,7 @@
             <section class="about">
                 <h2>Disclaimer</h2>
                 <img class="img-disc" src="images/caution.jpg" alt="A caution sign">
-                <p>The content on this website, <em>Medical Information and Advocacy</em>, is intended for informational and educational purposes only and reflects my personal experiences and opinions from working in healthcare.</p>
+                <p tabindex="0">The content on this website, <em>Medical Information and Advocacy</em>, is intended for informational and educational purposes only and reflects my personal experiences and opinions from working in healthcare.</p>
                 <p>Nothing on this site should be interpreted as medical advice, legal advice, diagnosis, or treatment recommendation. I am not a licensed medical professional or attorney, and the materials shared here are not a substitute for professional guidance.</p>
                 <p>Always seek the advice of qualified healthcare providers or legal professionals regarding any medical or legal concerns you may have. Never disregard professional advice or delay seeking it because of something you read on this website.</p>
                 <p>Use of this site does not create any kind of professional-client relationship.</p>
@@ -39,15 +39,14 @@
                 <h2 >Contact Form</h2>
                 <form action="https://httpbin.org/post" method="post">
                     
-                    
                         <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required><br><br>
+                        <input type="text" name="name" required><br><br>
 
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required><br><br>
+                        <input type="email" name="email" required><br><br>
 
                         <label for="identity">I am a:</label><br>
-                        <select id="identity" name="identity">
+                        <select name="identity">
                             <option value="">I am a...</option>
                             <option value="patient">Patient</option>
                             <option value="provider">Provider</option>
@@ -55,7 +54,7 @@
                         </select><br><br>
 
                         <label for="ins">If this is regarding a specific insurance, enter below:</label><br>
-                        <input list="insurance" id="ins" name="ins">
+                        <input list="insurance" name="ins">
                         <datalist id="insurance">
                             <option value="comm-ppo">Commercial PPO</option>
                             <option value="comm-hmo">Commercial HMO</option>
@@ -65,11 +64,11 @@
                         </datalist><br><br>
 
                         <label for="comments">Comments:</label><br>
-                        <textarea id="comments" name="comments" required></textarea><br><br>
+                        <textarea name="comments" maxlength="1000" required></textarea><br><br>
 
-                        <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                        <input type="hidden" name="possible_bot" value="true">
 
-                        <button>Send Message</button>
+                        <button type="submit">Send Message</button>
                     
                 </form>
             </section>
