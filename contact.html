@@ -37,8 +37,8 @@
             </section>
             <section>
                 <h2 >Contact Form</h2>
-                <form action="/contact.html" method="post">
-                    <fieldset>
+                <form action="https://httpbin.org/post" method="post">
+                    
                     
                         <label for="name">Name:</label><br>
                         <input type="text" id="name" name="name" required><br><br>
@@ -47,7 +47,7 @@
                         <input type="email" id="email" name="email" required><br><br>
 
                         <label for="identity">I am a:</label><br>
-                        <select id="identity" name="identity">
+                        <select id="identity" name="identity" value="other">
                             <option value="">I am a...</option>
                             <option value="patient">Patient</option>
                             <option value="provider">Provider</option>
@@ -61,13 +61,16 @@
                             <option value="comm-hmo">Commercial HMO</option>
                             <option value="medicare">Medicare</option>
                             <option value="medicaid">Medicaid</option>
+                            <option value="other">Other</option>
                         </datalist><br><br>
 
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" required></textarea><br><br>
+                        <label for="comments">Comments:</label><br>
+                        <textarea id="comments" name="comments" required></textarea><br><br>
 
-                        <button type="submit">Send Message</button>
-                    </fieldset>
+                        <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+
+                        <button>Send Message</button>
+                    
                 </form>
             </section>
         </main>
