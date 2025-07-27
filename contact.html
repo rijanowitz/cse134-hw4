@@ -40,13 +40,13 @@
                 <form action="https://httpbin.org/post" method="post">
                     
                         <label for="name">Name:</label><br>
-                        <input type="text" name="name" required><br><br>
+                        <input type="text" name="name" id="name" required><br><br>
 
                         <label for="email">Email:</label><br>
-                        <input type="email" name="email" required><br><br>
+                        <input type="email" name="email" id="email" required><br><br>
 
                         <label for="identity">I am a:</label><br>
-                        <select name="identity">
+                        <select id="identity" name="identity">
                             <option value="">I am a...</option>
                             <option value="patient">Patient</option>
                             <option value="provider">Provider</option>
@@ -54,7 +54,7 @@
                         </select><br><br>
 
                         <label for="ins">If this is regarding a specific insurance, enter below:</label><br>
-                        <input list="insurance" name="ins">
+                        <input list="insurance" id="ins" name="ins">
                         <datalist id="insurance">
                             <option value="comm-ppo">Commercial PPO</option>
                             <option value="comm-hmo">Commercial HMO</option>
@@ -64,7 +64,7 @@
                         </datalist><br><br>
 
                         <label for="comments">Comments:</label><br>
-                        <textarea name="comments" maxlength="1000" required></textarea><br><br>
+                        <textarea name="comments" id="comments" maxlength="1000" required></textarea><br><br>
 
                         <input type="hidden" name="possible_bot" value="true">
 
