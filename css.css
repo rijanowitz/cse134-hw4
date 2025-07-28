@@ -10,6 +10,7 @@
 	--main-bg: #FFFFFF;
 	--normal-text: #4A4A4A;
 	--shadow: #2b2a2a;
+	--warning: #e70404;
 }
 
 * {
@@ -214,6 +215,21 @@ button {
 	font: inherit;
 }
 
+req-ele {
+	color:var(--warning, red);
+	font-style: italic;
+	font-size: 0.75rem;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+output {
+	display: none;
+	font-style: italic;
+}
+
 /*RESPONSIVE TABLET*/
 @media (max-width: 1024px) {
   banner-title {
@@ -257,3 +273,5 @@ button {
     font-size: 1.25rem;
   }
 }
+
+
