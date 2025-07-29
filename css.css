@@ -254,6 +254,15 @@ output {
 	animation: fadeOut 5s;
 }
 
+#chars {
+	display: block;
+	text-align: right;
+}
+
+.warning {
+	color: red;
+}
+
 /*RESPONSIVE TABLET*/
 @media (max-width: 1024px) {
   banner-title {

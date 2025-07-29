@@ -67,11 +67,12 @@
                     </datalist><br><br>
 
                     <label for="comments">Comments: <req-ele>*</req-ele></label><br>
-                    <textarea name="comments" id="comments" maxlength="1000" required></textarea><br><br>
+                    <textarea name="comments" id="comments" maxlength="1000" required></textarea><br>
+                    <span id="chars">Characters remaining: 1000</span><br><br>
 
                     <input type="hidden" name="possible_bot" value="true">
 
-                    <output name="error" id="error">Error: <br></output>
+                    <output name="error" id="error">Error: <br><br></output>
                     <output name="information" id="info">Info: <br><br></output>
 
                     <button id="button" type="submit">Send Message</button>

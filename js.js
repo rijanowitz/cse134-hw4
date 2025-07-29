@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         error.textContent = "Error: Name must only contain characters.\n";
         error.classList.add("show")
         userName.classList.add("flash");
-
-        error.classList.remove("fade-out");
-        void error.offsetWidth;
         error.classList.add("fade-out");
 
         setTimeout(() => {
@@ -33,9 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         userName.setCustomValidity("");
         userName.classList.remove("flash");
+        error.classList.remove("fade-out");
     }
+
     userName.reportValidity();
     }); 
+
+    comments.addEventListener("input", () => {
+        const charsRemaining = 1000 - comments.value.length;
+        const chars = document.getElementById('chars')
+        chars.innerHTML = "Characters remaining: " + charsRemaining;
+        
+        if (charsRemaining < 100) {
+            chars.classList.add("warning")
+        }
+        else {
+            chars.classList.remove("warning")
+        }            
+    });
   
 });
 
