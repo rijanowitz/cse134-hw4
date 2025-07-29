@@ -40,7 +40,7 @@
                 <h2>Contact Form</h2>
                 <noscript>Please enable JavaScript for the best experience.</noscript>
                 <req-ele>* required</req-ele>
-                <form id="asdf" action="https://httpbin.org/post" method="post">
+                <form action="https://httpbin.org/post" method="post">
                     
                     <label for="name">Name: <req-ele>*</req-ele></label><br>
                     <input type="text" name="name" id="name" required pattern="[a-zA-Z]+"><br><br>
@@ -71,6 +71,7 @@
                     <span id="chars">Characters remaining: 1000</span><br><br>
 
                     <input type="hidden" name="possible_bot" value="true">
+                    <input type="hidden" name="form-errors" id="form-errors">
 
                     <output name="error" id="error">Error: <br><br></output>
                     <output name="information" id="info">Info: <br><br></output>
