@@ -80,6 +80,32 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         formErrors.value = JSON.stringify(form_errors);
     });
+
+    const mode = document.getElementById("mode");
+
+    mode.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark-mode");
+        if (mode.src.includes("dark.png")) {
+            mode.src = "images/light.png"
+            localStorage.setItem("dark-mode", "true");
+        } 
+        else {
+            mode.src = "images/dark.png"
+            localStorage.setItem("dark-mode", "false");
+        }
+    });
+
+    // Saved dark-mode?
+
+    const dark_mode = localStorage.getItem("dark-mode");
+    if (dark_mode == "true") {
+        document.documentElement.classList.add("dark-mode");
+        mode.src = "images/light.png";
+    } 
+    else {
+        document.documentElement.classList.remove("dark-mode");
+        mode.src = "images/dark.png";
+    }
   
 });
 

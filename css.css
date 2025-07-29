@@ -11,6 +11,24 @@
 	--normal-text: #4A4A4A;
 	--shadow: #2b2a2a;
 	--warning: #e70404;
+	--main-bg2: #c9d1d2;
+	--main-bg3: #FFFFFF;
+	--text-box: #FFFFFF;
+}
+
+:root.dark-mode{
+	--nav-bg: #003640;
+	--header-text: #B0E5F0;
+	--button-shadow: #002D38;
+	--footer-bg: #002833;
+	--alt-bg: #1E2D2B;
+	--main-bg: #121212;
+	--normal-text: #E0E0E0;
+	--shadow: #000000;
+	--warning: #FF4F4F;
+	--main-bg2: #003640;
+	--main-bg3: #1E2D2B;
+	--text-box: #404d4c;
 }
 
 * {
@@ -95,7 +113,7 @@ banner-title {
 
 main {
 	padding: 1rem 2rem;
-	background-color: #c9d1d2;
+	background-color: var(--main-bg2, #FFFFFF);
 }
 
 em {
@@ -103,7 +121,7 @@ em {
 }
 
 section {
-	background-color: #FFFFFF;
+	background-color: var(--main-bg3, #FFFFFF);
 	padding: 1rem 1.5rem;
 	border-radius: 12px;
 	box-shadow: 0 2px 6px var(--shadow, #000000);
@@ -197,6 +215,7 @@ input, textarea, select {
 	border: 1px solid #000000;
 	border-radius: 0.5rem;
 	width: 100%;
+	background-color: var(--text-box, #FFFFFF);
 }
 
 fieldset {
@@ -307,4 +326,9 @@ output {
   }
 }
 
+#mode {
+	width: 30px;
+	height: 30px;
+	float: right;
+}
 
