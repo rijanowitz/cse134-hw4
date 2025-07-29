@@ -226,8 +226,32 @@ input:user-invalid {
 }
 
 output {
-	display: none;
 	font-style: italic;
+	display: none;
+}
+
+.show {
+	display: block; 
+}
+
+@keyframes field-error {
+	0%   { background-color: #d6fffc; }
+	50%  { background-color: #99daff; }
+	100% { background-color: #d6faff; }
+}
+
+.flash {
+	animation: field-error 0.5s linear;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-out {
+	animation: fadeOut 5s;
 }
 
 /*RESPONSIVE TABLET*/

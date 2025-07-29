@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Medical Information and Advocacy</title>
+        <script src="js.js"></script>
     </head>
     <body>
         <header>
@@ -37,42 +38,43 @@
             </section>
             <section>
                 <h2>Contact Form</h2>
+                <noscript>Please enable JavaScript for the best experience.</noscript>
                 <req-ele>* required</req-ele>
-                <form action="https://httpbin.org/post" method="post">
+                <form id="asdf" action="https://httpbin.org/post" method="post">
                     
-                        <label for="name">Name: <req-ele>*</req-ele></label><br>
-                        <input type="text" name="name" id="name" required><br><br>
+                    <label for="name">Name: <req-ele>*</req-ele></label><br>
+                    <input type="text" name="name" id="name" required pattern="[a-zA-Z]+"><br><br>
 
-                        <label for="email">Email: <req-ele>*</req-ele></label><br>
-                        <input type="email" name="email" id="email" required><br><br>
+                    <label for="email">Email: <req-ele>*</req-ele></label><br>
+                    <input type="email" name="email" id="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br><br>
 
-                        <label for="identity">I am a:</label><br>
-                        <select id="identity" name="identity">
-                            <option value="" selected>I am a...</option>
-                            <option value="patient">Patient</option>
-                            <option value="provider">Provider</option>
-                            <option value="other">Other</option>
-                        </select><br><br>
+                    <label for="identity">I am a:</label><br>
+                    <select id="identity" name="identity">
+                    <option value="" selected>I am a...</option>
+                    <option value="patient">Patient</option>
+                    <option value="provider">Provider</option>
+                    <option value="other">Other</option>
+                    </select><br><br>
 
-                        <label for="ins">If this is regarding a specific insurance, enter below:</label><br>
-                        <input list="insurance" id="ins" name="ins">
-                        <datalist id="insurance">
-                            <option value="comm-ppo">Commercial PPO</option>
-                            <option value="comm-hmo">Commercial HMO</option>
-                            <option value="medicare">Medicare</option>
-                            <option value="medicaid">Medicaid</option>
-                            <option value="other">Other</option>
-                        </datalist><br><br>
+                    <label for="ins">If this is regarding a specific insurance, enter below:</label><br>
+                    <input list="insurance" id="ins" name="ins">
+                    <datalist id="insurance">
+                        <option value="comm-ppo">Commercial PPO</option>
+                        <option value="comm-hmo">Commercial HMO</option>
+                        <option value="medicare">Medicare</option>
+                        <option value="medicaid">Medicaid</option>
+                        <option value="other">Other</option>
+                    </datalist><br><br>
 
-                        <label for="comments">Comments: <req-ele>*</req-ele></label><br>
-                        <textarea name="comments" id="comments" maxlength="1000" required></textarea><br><br>
+                    <label for="comments">Comments: <req-ele>*</req-ele></label><br>
+                    <textarea name="comments" id="comments" maxlength="1000" required></textarea><br><br>
 
-                        <input type="hidden" name="possible_bot" value="true">
+                    <input type="hidden" name="possible_bot" value="true">
 
-                        <output name="error" for="name email comments">Error: <br></output>
-                        <output name="information" for="name email comments">Info: <br><br></output>
+                    <output name="error" id="error">Error: <br></output>
+                    <output name="information" id="info">Info: <br><br></output>
 
-                        <button type="submit">Send Message</button>
+                    <button id="button" type="submit">Send Message</button>
                     
                 </form>
             </section>
